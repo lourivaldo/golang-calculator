@@ -1,10 +1,12 @@
 
 steps:
   - name: 'gcr.io/cloud-builders/go'
-    args: ['install', '.']
+    args: ['install', './src']
+    env: ['GOPATH=go-calculator']
 
   - name: 'gcr.io/cloud-builders/go'
-    args: ['test']
+    args: ['test', 'go-calculator']
+    env: ['GOPATH=go-calculator']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--tag=gcr.io/$PROJECT_ID/go-calculator', '.']
