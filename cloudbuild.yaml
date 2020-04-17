@@ -1,7 +1,7 @@
 
 steps:
   - name: 'gcr.io/cloud-builders/go'
-    args: ['install', '.']
+    args: ['install', './src/go-calculator']
     env: ['PROJECT_ROOT=go-calculator']
 
   - name: 'gcr.io/cloud-builders/go'
