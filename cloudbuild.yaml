@@ -5,7 +5,7 @@ steps:
     env: ['PROJECT_ROOT=go-calculator']
 
   - name: 'gcr.io/cloud-builders/go'
-    args: ['test', 'go-calculator']
+    args: ['test', './...']
     env: ['PROJECT_ROOT=go-calculator']
 
   - name: 'gcr.io/cloud-builders/docker'
